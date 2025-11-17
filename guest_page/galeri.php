@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan Teknologi Informasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+.card {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+</style>
+<body>
+   
+   
+<!-- NAVBAR PUTIH + NAVBAR BIRU (FIXED TOP) -->
+<nav class="fixed-top bg-white shadow-sm">
+    <!-- NAVBAR PUTIH -->
+    <div class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../img/jtilogo.png" alt="" style="width: 43px; height: 43px;">
+                <div class="ms-3">
+                    <h5 class="mb-0 fw-bold" style="font-size: 16px;">Jurusan</h5>
+                    <p class="mb-0 fw-bold" style="font-size: 16px;">Teknologi Informasi</p>
+                </div>
+            </a>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fullNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Bahasa -->
+            <div class="d-none d-lg-flex ms-auto">
+                <div class="dropdown">
+                    <a class="lang-link px-4 py-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <img src="../img/flagind.png" width="24" class="me-2">Id
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><img src="../img/flagind.png" width="24" class="me-2">Id</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/flageng.png" width="24" class="me-2">Eng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Border Kuning -->
+    <div class="border-top-orange"></div>
+    <!-- NAVBAR BIRU (MENJADI SATU DENGAN NAVBAR PUTIH) -->
+    <div class="navbar navbar-expand-lg navbar-dark bg-primary-blue py-0">
+        <div class="container">
+
+            <!-- Collapse yang sama -->
+            <div class="collapse navbar-collapse" id="fullNav">
+                <ul class="navbar-nav w-100">
+
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-3" href="../index.php">Beranda</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-4 py-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Profil
+                        </a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="profil_visi.php">Visi & Misi</a></li>
+                            <li><a class="dropdown-item" href="profil_logo.php">Logo</a></li>
+                            <li><a class="dropdown-item" href="profil_struktur.php">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-4 py-3 dropdown-toggle"  href="#" data-bs-toggle="dropdown">
+                            Arsip
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="arsip_penelitian.php">Penelitian</a></li>
+                            <li><a class="dropdown-item" href="arsip_pengabdian.php">Pengabdian</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-3" href="galeri.php" style="color: white;">Galeri</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-4 py-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Layanan
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="layanan_sp.php">Sarana dan Prasarana</a></li>
+                            <li><a class="dropdown-item" href="layanan_k.php">Konsultatif</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-3" href="links.php">Links</a>
+                    </li>
+
+                    <!-- Bahasa di Mobile -->
+                    <li class="nav-item d-lg-none px-4 py-3">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <img src="img/flagind.png" width="24" class="me-2">Id
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><img src="img/flagind.png" width="24" class="me-2">Id</a></li>
+                                <li><a class="dropdown-item" href="#"><img src="img/flageng.png" width="24" class="me-2">Eng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Spacer agar konten tidak ketutup navbar -->
+<div style="height: 140px;"></div>
+    
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb" class="py-3">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item "><a href="profil_visi.php" class="text-decoration-none text-dark">Galeri</a></li>
+                <li class="breadcrumb-item active text-muted" aria-current="page">Cyber Security</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Main Content Column -->
+                <div class="">
+                    <div class=" border-0">
+                        <div class="card-body p-0">
+
+                            <!-- Agenda Section -->
+                            <section class="" id="agenda">
+                                <div class="container">
+                                <h2 class="h3 fw-bold mb-3">Agenda Kegiatan</h2>
+                                <div class="title-underline"></div>
+                                    <div class="row g-4">
+                                        <!-- Agenda Card 1 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm agenda-card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div class="bg-primary-blue text-white rounded p-3 text-center me-3" style="min-width: 80px;">
+                                                            <div class="fs-3 fw-bold">30</div>
+                                                            <div class="small">Nov 2025</div>
+                                                        </div>
+                                                        <div>
+                                                            <span class="badge bg-success mb-1">Akan Datang</span>
+                                                            <h5 class="card-title fw-bold mb-0">Seminar Nasional IoT</h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text text-muted small mb-2">
+                                                        <i class="bi bi-clock me-1"></i> 09:00 - 15:00 WIB
+                                                    </p>
+                                                    <p class="card-text text-muted small mb-3">
+                                                        <i class="bi bi-geo-alt me-1"></i> Auditorium Gedung Sipil
+                                                    </p>
+                                                    <p class="card-text">
+                                                        Seminar nasional tentang perkembangan teknologi Internet of Things dan implementasinya di industri.
+                                                    </p>
+                                                    <a href="#" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Agenda Card 2 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm agenda-card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div class="bg-primary-blue text-white rounded p-3 text-center me-3" style="min-width: 80px;">
+                                                            <div class="fs-3 fw-bold">30</div>
+                                                            <div class="small">Nov 2025</div>
+                                                        </div>
+                                                        <div>
+                                                            <span class="badge bg-success mb-1">Akan Datang</span>
+                                                            <h5 class="card-title fw-bold mb-0">Seminar Nasional IoT</h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text text-muted small mb-2">
+                                                        <i class="bi bi-clock me-1"></i> 09:00 - 15:00 WIB
+                                                    </p>
+                                                    <p class="card-text text-muted small mb-3">
+                                                        <i class="bi bi-geo-alt me-1"></i> Auditorium Gedung Sipil
+                                                    </p>
+                                                    <p class="card-text">
+                                                        Seminar nasional tentang perkembangan teknologi Internet of Things dan implementasinya di industri.
+                                                    </p>
+                                                    <a href="#" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Agenda Card 3 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm agenda-card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div class="bg-primary-blue text-white rounded p-3 text-center me-3" style="min-width: 80px;">
+                                                            <div class="fs-3 fw-bold">05</div>
+                                                            <div class="small">Des 2025</div>
+                                                        </div>
+                                                        <div>
+                                                            <span class="badge bg-success mb-1">Akan Datang</span>
+                                                            <h5 class="card-title fw-bold mb-0">Kompetisi Coding</h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text text-muted small mb-2">
+                                                        <i class="bi bi-clock me-1"></i> 08:00 - 17:00 WIB
+                                                    </p>
+                                                    <p class="card-text text-muted small mb-3">
+                                                        <i class="bi bi-geo-alt me-1"></i> Lab Pemrograman
+                                                    </p>
+                                                    <p class="card-text">
+                                                        Kompetisi pemrograman tingkat jurusan untuk mahasiswa semester 3 dan 5.
+                                                    </p>
+                                                    <a href="#" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <!-- Galeri Foto Kegiatan Section -->
+                            <section class="py-5 bg-white" id="kegiatan">
+                                <div class="container">
+                                <h2 class="h3 fw-bold mb-3">Galeri Foto Kegiatan</h2>
+                                <div class="title-underline"></div>
+                                    <!-- galeri -->
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-all" role="tabpanel">
+                                            <div class="row g-3">
+                                                <!-- Gallery Item 1 -->
+                                                <div class="col-md-4">
+                                                    <div class="gallery-item">
+                                                        <img src="../img/ncs1.jpg" class="img-fluid w-100" alt="Workshop AI">
+                                                        <div class="gallery-overlay">
+                                                            <div class="text-center">
+                                                                <h5 class="fw-bold">Workshop AI & Machine Learning</h5>
+                                                                <p class="small mb-0">15 Oktober 2025</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Gallery Item 2 -->
+                                                <div class="col-md-4">
+                                                    <div class="gallery-item">
+                                                        <img src="../img/ncs1.jpg" class="img-fluid w-100" alt="Seminar Blockchain">
+                                                        <div class="gallery-overlay">
+                                                            <div class="text-center">
+                                                                <h5 class="fw-bold">Seminar Teknologi Blockchain</h5>
+                                                                <p class="small mb-0">08 Oktober 2025</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Gallery Item 3 -->
+                                                <div class="col-md-4">
+                                                    <div class="gallery-item">
+                                                        <img src="../img/ncs1.jpg" class="img-fluid w-100" alt="Hackathon">
+                                                        <div class="gallery-overlay">
+                                                            <div class="text-center">
+                                                                <h5 class="fw-bold">Hackathon JTI 2025</h5>
+                                                                <p class="small mb-0">01 Oktober 2025</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Gallery Item 4 -->
+                                                <div class="col-md-4">
+                                                    <div class="gallery-item">
+                                                        <img src="../img/ncs1.jpg" class="img-fluid w-100" alt="Kunjungan Industri">
+                                                        <div class="gallery-overlay">
+                                                            <div class="text-center">
+                                                                <h5 class="fw-bold">Kunjungan Industri</h5>
+                                                                <p class="small mb-0">25 September 2025</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Gallery Item 5 -->
+                                                <div class="col-md-4">
+                                                    <div class="gallery-item">
+                                                        <img src="../img/ncs1.jpg" class="img-fluid w-100" alt="Workshop Cloud">
+                                                        <div class="gallery-overlay">
+                                                            <div class="text-center">
+                                                                <h5 class="fw-bold">Workshop Cloud Computing</h5>
+                                                                <p class="small mb-0">18 September 2025</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Gallery Item 6 -->
+                                                <div class="col-md-4">
+                                                    <div class="gallery-item">
+                                                        <img src="../img/ncs1.jpg" class="img-fluid w-100" alt="Wisuda">
+                                                        <div class="gallery-overlay">
+                                                            <div class="text-center">
+                                                                <h5 class="fw-bold">Wisuda Mahasiswa 2025</h5>
+                                                                <p class="small mb-0">10 September 2025</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </section>
+                            
+                            <!-- Video Gallery Section -->
+                            <section class="" id="video">
+                                <div class="container">
+                                <h2 class="h3 fw-bold mb-3">Video Kegiatan</h2>
+                                <div class="title-underline"></div>
+                                    
+                                    <div class="row g-4">
+                                        <!-- Video Item 1 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card border-0 shadow-sm">
+                                                <div class="ratio ratio-16x9">
+                                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title fw-bold">Profil Jurusan Teknologi Informasi</h5>
+                                                    <p class="card-text text-muted small">Seputar profil dan fasilitas Jurusan Teknologi Informasi</p>
+                                                    <span class="badge bg-primary">Profil</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Video Item 2 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card border-0 shadow-sm">
+                                                <div class="ratio ratio-16x9">
+                                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 2" allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title fw-bold">Highlight Workshop Cyber Security</h5>
+                                                    <p class="card-text text-muted small">Dokumentasi workshop keamanan siber 2025</p>
+                                                    <span class="badge bg-success">Workshop</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Video Item 3 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card border-0 shadow-sm">
+                                                <div class="ratio ratio-16x9">
+                                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 3" allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title fw-bold">Testimoni Alumni JTI</h5>
+                                                    <p class="card-text text-muted small">Pengalaman alumni bekerja di berbagai industri</p>
+                                                    <span class="badge bg-warning text-dark">Testimoni</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+   <?php require '../footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

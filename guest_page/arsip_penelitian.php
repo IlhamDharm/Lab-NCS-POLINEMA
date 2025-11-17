@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan Teknologi Informasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+.card {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+</style>
+<body>
+   
+   
+<!-- NAVBAR PUTIH + NAVBAR BIRU (FIXED TOP) -->
+<nav class="fixed-top bg-white shadow-sm">
+    <!-- NAVBAR PUTIH -->
+    <div class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../img/jtilogo.png" alt="" style="width: 43px; height: 43px;">
+                <div class="ms-3">
+                    <h5 class="mb-0 fw-bold" style="font-size: 16px;">Jurusan</h5>
+                    <p class="mb-0 fw-bold" style="font-size: 16px;">Teknologi Informasi</p>
+                </div>
+            </a>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fullNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Bahasa -->
+            <div class="d-none d-lg-flex ms-auto">
+                <div class="dropdown">
+                    <a class="lang-link px-4 py-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <img src="../img/flagind.png" width="24" class="me-2">Id
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><img src="../img/flagind.png" width="24" class="me-2">Id</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/flageng.png" width="24" class="me-2">Eng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Border Kuning -->
+    <div class="border-top-orange"></div>
+    <!-- NAVBAR BIRU (MENJADI SATU DENGAN NAVBAR PUTIH) -->
+    <div class="navbar navbar-expand-lg navbar-dark bg-primary-blue py-0">
+        <div class="container">
+
+            <!-- Collapse yang sama -->
+            <div class="collapse navbar-collapse" id="fullNav">
+                <ul class="navbar-nav w-100">
+
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-3" href="../index.php">Beranda</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-4 py-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Profil
+                        </a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="profil_visi.php">Visi & Misi</a></li>
+                            <li><a class="dropdown-item" href="profil_logo.php">Logo</a></li>
+                            <li><a class="dropdown-item" href="profil_struktur.php">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-4 py-3 dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">
+                            Arsip
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="arsip_penelitian.php">Penelitian</a></li>
+                            <li><a class="dropdown-item" href="arsip_pengabdian.php">Pengabdian</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-3" href="galeri.php">Galeri</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-4 py-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Layanan
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="layanan_sp.php">Sarana dan Prasarana</a></li>
+                            <li><a class="dropdown-item" href="layanan_k.php">Konsultatif</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-3" href="links.php">Links</a>
+                    </li>
+
+                    <!-- Bahasa di Mobile -->
+                    <li class="nav-item d-lg-none px-4 py-3">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <img src="img/flagind.png" width="24" class="me-2">Id
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><img src="img/flagind.png" width="24" class="me-2">Id</a></li>
+                                <li><a class="dropdown-item" href="#"><img src="img/flageng.png" width="24" class="me-2">Eng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Spacer agar konten tidak ketutup navbar -->
+<div style="height: 140px;"></div>
+    
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb" class="py-3">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item "><a href="arsip_penelitian.php" class="text-decoration-none text-dark">Arsip</a></li>
+                <li class="breadcrumb-item active text-muted" aria-current="page">Penelitian</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Main Content Column -->
+                <div class="">
+                    <div class=" border-0">
+                        <div class="card-body p-0">
+                            <h2 class="h3 fw-bold mb-3">Penelitian</h2>
+                            <div class="title-underline"></div>
+
+                                <!-- Publikasi/Penelitian Section -->
+                                <section class="py-0 bg-white">
+                                    <div class="container">
+                                        <!-- Info Banner -->
+                                        <div class="alert alert-info d-flex align-items-center justify-content-between mb-4" role="alert">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <i class="bi bi-info-circle-fill"></i>
+                                                <span>Silahkan lihat publikasi lebih lengkapnya di SINTA</span>
+                                            </div>
+                                            <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/5983891" class="btn btn-outline-primary bg btn-sm">Lihat semua di SINTA</a>
+                                        </div>
+                                        
+                                        <!-- Lab Header -->
+                                        <div class="row mb-4">
+                                            <div class="col-md-3">
+                                                <center>
+                                                    <img src="../img/jtilogo.png" 
+                                                    alt="Lab Logo" 
+                                                    class="m-3" style="height: 80px; width: auto;">
+                                                </center>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h2 class="fw-bold mb-2">Laboratorium Jaringan dan Keamanan Siber</h2>
+                                                <p class="text-muted mb-0">Kepala Lab: Erfan Rohadi, ST., M.Eng., Ph.D.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Filter Buttons -->
+                                        <div class="text-center mb-4">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-primary">Most Cited</button>
+                                                <button type="button" class="btn btn-outline-primary">Latest</button>
+                                                <button type="button" class="btn btn-outline-primary">Oldest</button>
+                                                <button type="button" class="btn btn-outline-primary">Years ▼</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Publications Grid -->
+                                        <div class="row g-4 mb-4">
+                                            <!-- Publication 1 -->
+                                            <div class="col-md-3">
+                                                <div class="card h-100 border shadow">
+                                                    <div class="card-body">
+                                                        <span class="badge bg-warning text-dark mb-2">Most Cited</span>
+                                                        <h6 class="card-title fw-bold mb-3" style="min-height: 80px;">
+                                                            Variations in chlorophyll-a concentration and the impact on Sardinella lemuru catches in Bali Strait, Indonesia
+                                                        </h6>
+                                                        <p class="text-muted small mb-1">2010</p>
+                                                        <p class="text-muted small mb-0">149 citations</p>
+                                                    </div>
+                                                    <div class="card-footer bg-white border-top-0">
+                                                        <button class="btn btn-outline-primary btn-sm w-100">Baca</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Publication 2 -->
+                                            <div class="col-md-3">
+                                                <div class="card h-100 border shadow">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title fw-bold mb-3" style="min-height: 80px;">
+                                                            Implementation IoT in system monitoring hydroponic plant water circulation and control
+                                                        </h6>
+                                                        <p class="text-muted small mb-1">2018</p>
+                                                        <p class="text-muted small mb-0">55 citations</p>
+                                                    </div>
+                                                    <div class="card-footer bg-white border-top-0">
+                                                        <button class="btn btn-outline-primary btn-sm w-100">Baca</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Publication 3 -->
+                                            <div class="col-md-3">
+                                                <div class="card h-100 border shadow">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title fw-bold mb-3" style="min-height: 80px;">
+                                                            Sistem Monitoring Budidaya Ikan Lele Berbasis Internet Of Things Menggunakan Raspberry Pi
+                                                        </h6>
+                                                        <p class="text-muted small mb-1">2018</p>
+                                                        <p class="text-muted small mb-0">46 citations</p>
+                                                    </div>
+                                                    <div class="card-footer bg-white border-top-0">
+                                                        <button class="btn btn-outline-primary btn-sm w-100">Baca</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Publication 4 -->
+                                            <div class="col-md-3">
+                                                <div class="card h-100 border shadow">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title fw-bold mb-3" style="min-height: 80px;">
+                                                            Internet of Things integration in smart grid
+                                                        </h6>
+                                                        <p class="text-muted small mb-1">2018</p>
+                                                        <p class="text-muted small mb-0">33 citations</p>
+                                                    </div>
+                                                    <div class="card-footer bg-white border-top-0">
+                                                        <button class="btn btn-outline-primary btn-sm w-100">Baca</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Pagination -->
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1">◄ Previous</a>
+                                                </li>
+                                                <li class="page-item active" ><a class="page-link" href="#" style="background-color: var(--primary-blue) !important; border-color: var(--primary-blue) !important;">1-4 of 184</a></li>
+                                                <li class="page-item" >
+                                                    <a class="page-link" style="color: var(--primary-blue) !important;" href="#">Next ►</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </section>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+   <?php require '../footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
