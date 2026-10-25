@@ -1,9 +1,10 @@
+<?php require_once __DIR__ . '/../lang-switcher.php'; ?>
 <!DOCTYPE html>
-<html lang="id">
+<html lang="<?php echo getCurrentLanguage(); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jurusan Teknologi Informasi</title>
+    <title><?php echo getCurrentLanguage() === 'id' ? 'Jurusan Teknologi Informasi' : 'Department of Information Technology'; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style.css">
@@ -69,12 +70,12 @@
                 <ul class="navbar-nav w-100">
 
                     <li class="nav-item">
-                        <a class="nav-link px-4 py-3" href="../index.php">Beranda</a>
+                        <a class="nav-link px-4 py-3" href="../index.php"><?php echo t('nav_home'); ?></a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link px-4 py-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            Profil
+                            <?php echo t('nav_profile'); ?>
                         </a>
                         
                         <ul class="dropdown-menu">
@@ -86,7 +87,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link px-4 py-3 dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">
-                            Arsip
+                            <?php echo t('nav_archive'); ?>
                         </a>
                         <ul class="dropdown-menu ">
                             <li><a class="dropdown-item" href="arsip_penelitian.php">Penelitian</a></li>
@@ -95,7 +96,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link px-4 py-3" href="galeri.php">Galeri</a>
+                        <a class="nav-link px-4 py-3" href="galeri.php"><?php echo t('nav_gallery'); ?></a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -109,7 +110,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link px-4 py-3" href="links.php">Links</a>
+                        <a class="nav-link px-4 py-3" href="links.php"><?php echo t('nav_links'); ?></a>
                     </li>
 
                     <!-- Bahasa di Mobile -->
@@ -139,8 +140,8 @@
     <div class="container mt-3">
         <nav aria-label="breadcrumb" class="py-3">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item "><a href="arsip_penelitian.php" class="text-decoration-none text-dark">Arsip</a></li>
-                <li class="breadcrumb-item active text-muted" aria-current="page">Penelitian</li>
+                <li class="breadcrumb-item "><a href="arsip_penelitian.php" class="text-decoration-none text-dark"><?php echo t('nav_archive'); ?></a></li>
+                <li class="breadcrumb-item active text-muted" aria-current="page"><?php echo t('archive_research_title'); ?></li>
             </ol>
         </nav>
     </div>
@@ -153,7 +154,7 @@
                 <div class="">
                     <div class=" border-0">
                         <div class="card-body p-0">
-                            <h2 class="h3 fw-bold mb-3">Penelitian</h2>
+                            <h2 class="h3 fw-bold mb-3"><?php echo t('archive_research_title'); ?></h2>
                             <div class="title-underline"></div>
 
                                 <!-- Publikasi/Penelitian Section -->

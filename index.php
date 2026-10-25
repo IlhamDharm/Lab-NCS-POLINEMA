@@ -103,10 +103,10 @@
                     <li class="nav-item d-lg-none px-4 py-3">
                         <div class="dropdown">
                             <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                <img src="img/flagind.png" width="24" class="me-2">Id
+                                <img src="img/flag<?php echo getCurrentLanguage(); ?>.png" width="24" class="me-2"><?php echo strtoupper(getCurrentLanguage()); ?>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><img src="img/flagind.png" width="24" class="me-2">Id</a></li>
+                                <li><a class="dropdown-item" href="<?php echo getLangUrl('id'); ?>"><img src="img/flagind.png" width="24" class="me-2">Id</a></li>
                                 <li><a class="dropdown-item" href="#"><img src="img/flageng.png" width="24" class="me-2">Eng</a></li>
                             </ul>
                         </div>
@@ -136,7 +136,7 @@
         
         <!-- Text Content -->
         <div class="container position-relative h-100 d-flex align-items-center justify-content-center" style="z-index: 3;">
-            <h1 class="display-3 fw-bold">Lab Network and <span style="color: #FEC01A;"> Cyber Security</span></h1>
+            <h1 class="display-3 fw-bold">Lab Network dan Cyber Security</h1>
         </div>
     </section>
     
@@ -144,7 +144,7 @@
     <div class="container mt-3">
         <nav aria-label="breadcrumb" class="py-3">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-dark">Beranda</a></li>
+                <li class="breadcrumb-item"><a href="index.php" class="text-decoration-none text-dark">Beranda</a></li>
                 <li class="breadcrumb-item active text-muted" aria-current="page">Cyber Security</li>
             </ol>
         </nav>
@@ -158,7 +158,7 @@
                 <div class="col-lg-8">
                     <div class="card border-0">
                         <div class="card-body p-0">
-                            <h2 class="h3 fw-bold mb-3">Lab Network and Cyber Security</h2>
+                            <h2 class="h3 fw-bold mb-3">Lab Network dan Cyber Security</h2>
                             <div class="title-underline"></div>
                             <!-- Image Placeholder -->
                             <img src="img/ncs1.jpg" alt="" class="rounded mb-4 w-100" style="max-height: 200px; object-fit: cover;">

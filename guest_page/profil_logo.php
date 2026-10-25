@@ -57,12 +57,12 @@
                 <ul class="navbar-nav w-100">
 
                     <li class="nav-item">
-                        <a class="nav-link px-4 py-3" href="../index.php">Beranda</a>
+                        <a class="nav-link px-4 py-3" href="../index.php"><?php echo t('nav_home'); ?></a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link px-4 py-3 dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">
-                            Profil
+                            <?php echo t('nav_profile'); ?>
                         </a>
                         
                         <ul class="dropdown-menu">
@@ -74,7 +74,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link px-4 py-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            Arsip
+                            <?php echo t('nav_archive'); ?>
                         </a>
                         <ul class="dropdown-menu ">
                             <li><a class="dropdown-item" href="arsip_penelitian.php">Penelitian</a></li>
@@ -83,12 +83,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link px-4 py-3" href="galeri.php">Galeri</a>
+                        <a class="nav-link px-4 py-3" href="galeri.php"><?php echo t('nav_gallery'); ?></a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link px-4 py-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            Layanan
+                            <?php echo t('nav_service'); ?>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="layanan_sp.php">Sarana dan Prasarana</a></li>
@@ -97,7 +97,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link px-4 py-3" href="links.php">Links</a>
+                        <a class="nav-link px-4 py-3" href="links.php"><?php echo t('nav_links'); ?></a>
                     </li>
 
                     <!-- Bahasa di Mobile -->
@@ -127,8 +127,8 @@
     <div class="container mt-3">
         <nav aria-label="breadcrumb" class="py-3">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="profil_logo.php" class="text-decoration-none text-dark">Profil</a></li>
-                <li class="breadcrumb-item active text-muted" aria-current="page">Logo</li>
+                <li class="breadcrumb-item"><a href="profil_logo.php" class="text-decoration-none text-dark"><?php echo t('nav_profile'); ?></a></li>
+                <li class="breadcrumb-item active text-muted" aria-current="page"><?php echo t('profil_logo_title'); ?></li>
             </ol>
         </nav>
     </div>
@@ -141,14 +141,14 @@
                 <div class="col-lg-8">
                     <div class="card border-0">
                         <div class="card-body p-0">
-                            <h2 class="h3 fw-bold mb-3">Logo Lab</h2>
+                            <h2 class="h3 fw-bold mb-3"><?php echo t('profil_logo_title'); ?></h2>
                             <div class="title-underline"></div>
                             <!-- Image Placeholder -->
                             <img src="../img/jtilogo.png" alt="" class="rounded mb-4" style="max-height: 200px; object-fit: cover;">
                             <!-- Text Content -->
-                            <p class="mb-2 h5 fw-bold" style="line-height: 1.8;">Makna Logo :</p>
+                            <p class="mb-2 h5 fw-bold" style="line-height: 1.8;"><?php echo t('profil_logo_title'); ?> :</p>
                             <p class="mb-2" style="line-height: 1.8;text-align: justify;">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis quos accusamus? Itaque dolores placeat perspiciatis quas? Ad architecto incidunt explicabo! Autem ipsam amet praesentium recusandae obcaecati illo cupiditate veniam nemo laudantium! Eos blanditiis sapiente consequatur? Obcaecati repudiandae rem harum?
+                                <?php echo t('profil_logo_desc'); ?>
                             </p>
                             <p class="mb-2 h5 fw-bold" style="line-height: 1.8;">Misi :</p>
                               <ul class="list-misi mb-0" style="line-height: 1.8;text-align: justify;">
